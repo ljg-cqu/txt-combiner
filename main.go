@@ -9,6 +9,21 @@ import (
 	"github.com/sqweek/dialog"
 )
 
+/*
+   A Go program for processing and merging text files:
+
+   Features:
+   - Removes empty lines from two input files.
+   - Creates two merged output files:
+     1. `output_file1_priority.txt`: Prioritizes lines from the first file.
+     2. `output_file2_priority.txt`: Prioritizes lines from the second file.
+
+   Workflow:
+   - Prompts users to select two input files using a GUI file selector (via the `dialog` library).
+   - Processes each file to remove empty lines.
+   - Merges files into two distinct outputs with different priority orders.
+*/
+
 // Function to remove empty lines from a given file
 func removeEmptyLines(inputFile string) error {
 	file, err := os.Open(inputFile)
